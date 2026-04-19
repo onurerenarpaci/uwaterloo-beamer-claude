@@ -13,7 +13,7 @@ uwaterloo-beamer-claude/
 │   ├── graph-styles.tex             # Node and edge styles for all graphs
 │   ├── uw-headline.tex             # UW four-segment gold stripe at top of every slide
 │   └── drawings.tex                # \drawing / \drawingnode macros for Simon Oya art
-├── drawings/                        # Simon Oya character & object PNGs (see catalog below)
+├── simon-drawings/                  # Simon Oya character & object PNGs (see catalog below)
 ├── generated-icons/                 # AI-generated icons (transparent PNG, monochrome flat art)
 └── slide-images/                    # Auto-generated PNGs (one per slide)
     ├── slide-001.png
@@ -91,11 +91,11 @@ To adjust stripe height, change the `ht=5pt` value in each `\begin{beamercolorbo
 ## Existing components
 
 ### `components/drawings.tex`
-Provides `\drawing` and `\drawingnode` macros for Simon Oya's character/object illustrations (source: https://simonoya.com/drawings/). All image files live in `drawings/` at the project root.
+Provides `\drawing` and `\drawingnode` macros for Simon Oya's character/object illustrations (source: https://simonoya.com/drawings/). All image files live in `simon-drawings/` at the project root.
 
 **Rule: whenever a slide depicts a participant, character, or adversary, use a Simon Oya drawing instead of a plain text label or node.**
 
-**Sprite sheet:** `drawings/sprites-v0.png` contains every drawing in one image — read it with the Read tool to visually browse and decide which file to use before writing any slide code.
+**Sprite sheet:** `simon-drawings/sprites-v0.png` contains every drawing in one image — read it with the Read tool to visually browse and decide which file to use before writing any slide code.
 
 #### Macros
 

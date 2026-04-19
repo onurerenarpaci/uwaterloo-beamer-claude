@@ -25,8 +25,12 @@ typography, and a Claude Code workflow for slide-by-slide iteration.
 - `components/uw-headline.tex` — UW four-segment gold stripe at the top of every slide.
 - `components/graph-styles.tex` — TikZ node/edge styles for graph visuals.
 - `components/drawings.tex` — `\drawing` / `\drawingnode` macros for Simon Oya's
-  character/object illustrations (`drawings/`).
+  character/object illustrations (`simon-drawings/`).
 - `fonts/` — bundled Barlow Condensed TTFs (no system install needed).
+
+## Attribution
+
+Images by Simon Oya: https://simonoya.com/drawings/
 
 ## Working with Claude Code
 

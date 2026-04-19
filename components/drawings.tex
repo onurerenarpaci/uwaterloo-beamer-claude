@@ -1,17 +1,17 @@
-% Simon Oya character/object drawings — all files live in drawings/
-% Attribution: https://simonoya.com/drawings/
+% Simon Oya character/object drawings — all files live in simon-drawings/
+% Images by Simon Oya: https://simonoya.com/drawings/
 %
 % Usage:
-%   \drawing[height=2cm]{a01-alice}          % any file from drawings/, no extension
+%   \drawing[height=2cm]{a01-alice}          % any file from simon-drawings/, no extension
 %   \drawingnode{(x,y)}{label}{a01-alice}    % drop a drawing at a TikZ coordinate
 
 \newcommand{\drawing}[2][height=1.2cm]{%
-  \includegraphics[#1]{drawings/#2}%
+  \includegraphics[#1]{simon-drawings/#2}%
 }
 
 % Place a drawing as a TikZ node.
 % Args: [img options] {node name} {coordinate} {file stem}
 % Example: \drawingnode[height=1.2cm]{alice}{(0,0)}{a01-alice}
 \newcommand{\drawingnode}[4][height=1.2cm]{%
-  \node (#2) at #3 {\includegraphics[#1]{drawings/#4}};%
+  \node (#2) at #3 {\includegraphics[#1]{simon-drawings/#4}};%
 }
