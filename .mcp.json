@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "openai-gpt-image-mcp": {
+      "command": "node",
+      "args": ["${OPENAI_GPT_IMAGE_MCP_PATH}/dist/index.js"],
+      "env": { "OPENAI_API_KEY": "${OPENAI_API_KEY}" }
+    }
+  }
+}

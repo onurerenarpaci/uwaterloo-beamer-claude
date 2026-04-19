@@ -1,0 +1,15 @@
+% Replaces the Madrid section-navigation headline with the UW four-segment
+% decorative stripe. Colors are defined in beamercolorthemeotmpsi.sty.
+%
+% Stripe order (left → right): dark gold → UW gold → light gold → pale yellow
+% Each segment is 25 % of the slide width and 5 pt tall.
+
+\setbeamertemplate{headline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.25\paperwidth, ht=5pt, dp=0pt]{uw stripe 1}\end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.25\paperwidth, ht=5pt, dp=0pt]{uw stripe 2}\end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.25\paperwidth, ht=5pt, dp=0pt]{uw stripe 3}\end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.25\paperwidth, ht=5pt, dp=0pt]{uw stripe 4}\end{beamercolorbox}%
+  }%
+}

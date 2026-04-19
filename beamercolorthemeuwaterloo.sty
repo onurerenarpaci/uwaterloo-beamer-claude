@@ -1,0 +1,83 @@
+\ProvidesPackage{beamercolorthemeuwaterloo}[2026/04/19 University of Waterloo color theme]
+
+% ── Palette ───────────────────────────────────────────────────────────────────
+% Edit these colors to retheme the entire presentation.
+
+\definecolor{primary}{HTML}{FED34C}    % UW gold  — accents, blocks, title bg
+\definecolor{secondary}{HTML}{000000}  % black    — frametitle, footer
+\definecolor{accent}{HTML}{F2EDA8}     % pale gold — light highlights
+\definecolor{success}{HTML}{5CB85C}    % green    — example blocks
+\definecolor{neutral}{HTML}{AAAAAA}    % gray     — muted elements
+\definecolor{bg}{HTML}{F5F6FA}         % off-white — block backgrounds
+
+% ── UW decorative stripe shades (used in components/uw-headline.tex) ──────────
+\definecolor{uwstripe@a}{HTML}{C49A00}  % darkest gold
+\definecolor{uwstripe@b}{HTML}{FED34C}  % UW gold
+\definecolor{uwstripe@c}{HTML}{F5E07A}  % light gold
+\definecolor{uwstripe@d}{HTML}{FAF0B0}  % palest yellow
+
+% User-accessible dark gold (same as uwstripe@a, safe to use from slides)
+\definecolor{uwgolddark}{HTML}{C49A00}
+
+% Beamer color slots consumed by the headline stripe
+\setbeamercolor{uw stripe 1}{bg=uwstripe@a}
+\setbeamercolor{uw stripe 2}{bg=uwstripe@b}
+\setbeamercolor{uw stripe 3}{bg=uwstripe@c}
+\setbeamercolor{uw stripe 4}{bg=uwstripe@d}
+
+% ── Graph-specific aliases ────────────────────────────────────────────────────
+% These are referenced by components/graph-styles.tex.
+\definecolor{nodeblue}{HTML}{4A90D9}
+\definecolor{nodered}{HTML}{E05C5C}
+\definecolor{nodegreen}{HTML}{5CB85C}
+\definecolor{nodegray}{HTML}{AAAAAA}
+\definecolor{edgecolor}{HTML}{555555}
+
+% ── Distinct hue palette for secret-share visualisations ─────────────────────
+% Used to make individual Shamir shares visually distinguishable.
+\definecolor{shareViolet}{HTML}{9B59B6}
+\definecolor{shareBlue}{HTML}{3498DB}
+\definecolor{shareOrange}{HTML}{E67E22}
+\definecolor{sharePink}{HTML}{E91E63}
+\definecolor{shareTeal}{HTML}{1ABC9C}
+\definecolor{shareRed}{HTML}{E74C3C}
+\definecolor{shareCyan}{HTML}{00BCD4}
+\definecolor{shareLime}{HTML}{8BC34A}
+\definecolor{shareCoral}{HTML}{FF7043}
+\definecolor{shareIndigo}{HTML}{5C6BC0}
+\definecolor{shareMagenta}{HTML}{C2185B}
+\definecolor{shareMint}{HTML}{26A69A}
+
+% ── Beamer structure colors ───────────────────────────────────────────────────
+
+\setbeamercolor{palette primary}{bg=secondary, fg=primary}
+\setbeamercolor{palette secondary}{bg=secondary!85!white, fg=white}
+\setbeamercolor{palette tertiary}{bg=secondary!70!white, fg=white}
+\setbeamercolor{palette quaternary}{bg=primary, fg=black}
+
+\setbeamercolor{structure}{fg=secondary}
+\setbeamercolor{title}{fg=black, bg=primary}        % gold title slide
+\setbeamercolor{frametitle}{fg=white, bg=secondary}  % white text on black bar
+
+\setbeamercolor{block title}{fg=black, bg=primary}
+\setbeamercolor{block body}{fg=black, bg=bg}
+
+\setbeamercolor{block title alerted}{fg=white, bg=secondary}
+\setbeamercolor{block body alerted}{fg=black, bg=primary!20}
+
+\setbeamercolor{block title example}{fg=black, bg=primary}
+\setbeamercolor{block body example}{fg=black, bg=primary!15}
+
+% Subtle tinted panel — used to visually connect related content (e.g. stat
+% panels where a paragraph on one side is linked to big numbers on the other).
+\setbeamercolor{panel tinted}{fg=black, bg=primary!18}
+
+\setbeamercolor{itemize item}{fg=secondary}
+\setbeamercolor{itemize subitem}{fg=secondary!60!white}
+\setbeamercolor{enumerate item}{fg=secondary}
+
+\setbeamercolor{section in toc}{fg=secondary}
+\setbeamercolor{subsection in toc}{fg=secondary!70}
+
+\setbeamercolor{footnote mark}{fg=secondary}
+\setbeamercolor{footnote}{fg=black!70}

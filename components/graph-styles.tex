@@ -1,0 +1,70 @@
+% ── Graph node styles ─────────────────────────────────────────────────────────
+%
+% Usage: \node[gnode] (A) {A};
+%        \node[gnode, fill=nodered] (B) {B};
+%        \draw[gedge] (A) -- (B);
+%        \draw[gedge, ->] (A) -- (B);
+
+\tikzset{
+  % Default graph node
+  gnode/.style={
+    circle,
+    draw=edgecolor,
+    fill=nodeblue!80,
+    text=white,
+    font=\small\bfseries,
+    minimum size=28pt,
+    inner sep=2pt,
+    line width=0.8pt,
+  },
+  % Highlighted / active node
+  gnode highlight/.style={
+    gnode,
+    fill=nodered,
+    draw=nodered!60!black,
+    line width=1.2pt,
+  },
+  % Visited / processed node
+  gnode visited/.style={
+    gnode,
+    fill=nodegray,
+    draw=nodegray!60!black,
+  },
+  % Default undirected edge
+  gedge/.style={
+    draw=edgecolor,
+    line width=1pt,
+  },
+  % Directed edge
+  gedge directed/.style={
+    gedge,
+    -{Stealth[length=6pt]},
+  },
+  % Highlighted edge
+  gedge highlight/.style={
+    gedge,
+    draw=nodered,
+    line width=1.8pt,
+  },
+  % Edge label style
+  elabel/.style={
+    font=\scriptsize,
+    fill=white,
+    inner sep=1pt,
+  },
+}
+
+% ── Reusable graph environments ───────────────────────────────────────────────
+%
+% Wrap your TikZ graph in a tikzpicture using these settings for consistency:
+%
+%   \begin{tikzpicture}[graph canvas, node distance=1.6cm]
+%     ...
+%   \end{tikzpicture}
+
+\tikzset{
+  graph canvas/.style={
+    every node/.style={gnode},
+    every edge/.style={gedge},
+  },
+}

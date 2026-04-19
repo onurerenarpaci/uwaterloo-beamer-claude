@@ -1,0 +1,65 @@
+% University of Waterloo typography — requires XeLaTeX + fontspec.
+%
+% Brand font          System alternative used here
+% ─────────────────   ──────────────────────────────────────────────────────
+% Bureau Grotesque  → Barlow Condensed  (official UW PC/Mac alternative)
+%   Role: headlines, frame titles — condensed bold, title/upper case
+%
+% Le Monde Livre    → Georgia
+%   Role: body copy, lead-in copy — sentence/title case
+%
+% Typ1451           → Verdana
+%   Role: captions, footnotes, small labels
+
+\usepackage{fontspec}
+
+% ── Font family definitions ───────────────────────────────────────────────────
+
+% Headline font (Bureau Grotesque alternative) — loaded from project fonts/
+\newfontfamily\uwheadline{BarlowCondensed-ExtraBold}[
+  Path           = {fonts/},
+  Extension      = {.ttf},
+  BoldFont       = {BarlowCondensed-ExtraBold},
+  ItalicFont     = {BarlowCondensed-ExtraBoldItalic},
+  BoldItalicFont = {BarlowCondensed-ExtraBoldItalic},
+]
+
+% Caption font (Typ1451 alternative) — available as \uwcaption in slides
+\newfontfamily\uwcaption{Verdana}
+
+% Body: Georgia as main serif
+\setmainfont{Georgia}[
+  BoldFont       = {Georgia Bold},
+  ItalicFont     = {Georgia Italic},
+  BoldItalicFont = {Georgia Bold Italic},
+]
+
+% Barlow Condensed as the sans family (Beamer UI elements: footer, navigation)
+\setsansfont{BarlowCondensed-Regular}[
+  Path           = {fonts/},
+  Extension      = {.ttf},
+  BoldFont       = {BarlowCondensed-Bold},
+  ItalicFont     = {BarlowCondensed-RegularItalic},
+  BoldItalicFont = {BarlowCondensed-BoldItalic},
+]
+
+% ── Beamer font theme ─────────────────────────────────────────────────────────
+
+% Use serif (Georgia) for slide body text
+\usefonttheme{serif}
+
+% Apply headline font to title-level elements
+\setbeamerfont{title}         {family=\uwheadline, size=\LARGE}
+\setbeamerfont{subtitle}      {family=\uwheadline, size=\large}
+\setbeamerfont{frametitle}    {family=\uwheadline, size=\large}
+\setbeamerfont{framesubtitle} {family=\uwheadline, size=\normalsize}
+\setbeamerfont{section in toc}{family=\uwheadline, size=\normalsize}
+\setbeamerfont{block title}   {family=\uwheadline, size=\normalsize}
+
+% Keep author/institute/date in Georgia
+\setbeamerfont{author}    {family=\rmfamily, size=\normalsize}
+\setbeamerfont{institute} {family=\rmfamily, size=\small}
+\setbeamerfont{date}      {family=\rmfamily, size=\small}
+
+% Footer in Avenir (small, sans)
+\setbeamerfont{footline}  {family=\sffamily, size=\tiny}

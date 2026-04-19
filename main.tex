@@ -1,0 +1,48 @@
+\documentclass[aspectratio=169]{beamer}
+
+% ── Theme ────────────────────────────────────────────────────────────────────
+\usetheme{Madrid}
+\usecolortheme{uwaterloo}     % see beamercolorthemeuwaterloo.sty
+
+% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{dateplot}
+\usetikzlibrary{
+  arrows.meta,
+  positioning,
+  shapes.geometric,
+  fit,
+  calc,
+  decorations.pathreplacing,
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath, amssymb}
+\usepackage[dvipsnames]{xcolor}
+
+% ── Metadata ─────────────────────────────────────────────────────────────────
+\title[Short Title]{Presentation Title}
+%\subtitle{Subtitle here}
+\author[Author]{Author Name}
+\institute{University of Waterloo}
+\date{\today}
+
+% ── Reusable components ───────────────────────────────────────────────────────
+\input{components/uw-fonts}
+\input{components/graph-styles}
+\input{components/uw-headline}
+\input{components/drawings}
+
+% ── Slides ───────────────────────────────────────────────────────────────────
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\input{slides/02-placeholder}
+
+\end{document}
